@@ -1,0 +1,67 @@
+.process-steps{
+    position: relative;
+
+    //步驟線
+    &::after{
+        content: " ";
+        display: block;
+        height: 1px;
+        background-color: $primary-500;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+    }
+
+    //步驟圓圈
+    .step-circle{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid $primary-500;
+        z-index: 1;
+        background-color: theme-color('primary');
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    //實體圓圈
+    .active{
+        border-color: $primary-200;
+
+        &::after{
+            content: " ";
+            display: block;
+            height: 14px;
+            width: 14px;
+            border-radius: 50%;
+            background-color: $primary-200;
+        }
+    }
+
+    //完成後的綠色勾勾
+    .completed{
+        font-size: 16px;
+        background-color: $primary-200;
+        color: $primary;
+    }
+}
+
+//付款成功頁面
+.process-steps-end{
+
+//步驟線
+&::after{
+    background-color: $primary;
+}
+
+//付款成功
+.checkout-success{
+    font-size: 16px;
+    background-color: $primary;
+    color: $primary-200;
+    border-color: $primary;
+}
+}
+
+

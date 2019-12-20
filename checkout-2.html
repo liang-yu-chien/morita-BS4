@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="Bootstrap, SASS, SCSS, Breakfast,早午餐, 吐司, 漢堡,義大利麵,">
+      <meta property="description" content="森田morita">
+      <!-- Facebook -->
+      <meta property="og:title" content="森田morita">
+      <meta property="og:description" content="森田morita早午餐">
+      <meta property="og:locale" content="zh_tw">
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="https://github.com/liang-yu-chien/BS4Final">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.3/sweetalert2.css">
+    <link rel="stylesheet" href="stylesheets/all.css">
+    <link rel="icon" href="images/icon_16.ico">
+    <title>森田Morita-結帳</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-white">
+        <div class="container">
+          <button class="navbar-toggler d-md-none d-flex align-items-center" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            <img src="images/森田.svg" width="320" height="100" alt="" class="d-none d-md-inline-block">
+            <img src="images/森田.svg" width="220" height="50" alt="" class="d-inline-block d-md-none">
+          </a>
+          <a class="nav-link d-flex align-items-center order-md-1" href="#" id="navDropdownMenu" data-toggle="dropdown"><i
+              class="material-icons">shopping_cart</i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" style="min-width: 300px;">
+            <table class="table">
+              <thead>
+                  <tr class="text-center">
+                      <th class="text-center">商品照片</th>
+                      <th class="text-center">商品名稱</th>
+                      <th class="text-center">商品價格</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>
+                          <a href="#"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=401&q=80" alt="" width="64px"
+                                  height="64px"></a></td>
+                      <td>
+                          <p class="h5 text-center">美式漢堡</p>
+                      </td>
+                      <td>
+                          <p class="h4 text-right">NT$130</p>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <a href="#"><img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80" alt="" width="64px"
+                                  height="64px"></a></td>
+                      <td>
+                          <p class="h5 text-center">熱壓吐司</p>
+                      </td>
+                      <td>
+                          <p class="h4 text-right">NT$110</p>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td colspan="2" class="text-right h4 pt-2">Total :</td>
+                      <td class="text-right h3 pt-2">NT$240</td>
+                  </tr >
+              </tbody>
+          </table>
+          <a href="checkout.html" class="btn btn-accent btn-block py-3 text-primary">結帳</a>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">首頁</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="products.html">早餐</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="register.html">登入</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <div class="container my-lg-6">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="negative-row-margin mx-lg-0">
+                    <div class="bg-primary text-primary-lighter p-5">
+                        <div class="form-row mb-5">
+                            <div class="col-6">
+                                <h1 class="text-primary-lighter">運送</h1>
+                            </div>
+                            <div class="col-6 d-flex align-items-center">
+                                <div class="process-steps d-flex justify-content-between w-100">
+                                    <div class="step-circle material-icons completed">done</div>
+                                    <div class="step-circle material-icons completed">done</div>
+                                    <div class="step-circle active"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <form action="checkout-completed.html" class="needs-validation" novalidate>
+                            <nav class="nav nav-pills nav-fill nav-dark mb-5" id="myList">
+                                <a class="nav-item nav-link active h4 py-3" href="#e-invoice" data-toggle="list">電子發票</a>
+                                <a class="nav-item nav-link h4 py-3" href="#invoice" data-toggle="list">郵寄發票</a>
+                            </nav>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="e-invoice">
+                                    <div class="form-group">
+                                        <label class="h4" for="email">電子郵件信箱</label>
+                                        <input type="email" class="form-control form-control-lg bg-primary-lighter" id="email"
+                                            placeholder="example@email.com" required>
+                                            <div class="invalid-feedback">
+                                                    請輸入電子郵件信箱
+                                                  </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="h4" for="texid">統一編號(選填)</label>
+                                        <input type="text" class="form-control form-control-lg bg-primary-lighter" id="texid"
+                                            placeholder="12345678">
+                                    </div>
+
+                                    
+                            </div>
+                            
+
+                            <div class="tab-pane" id="invoice">
+                                <label class="h4" for="city">地址</label>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <select class="form-control form-control-lg bg-primary-lighter" id="city">
+                                            <option selected>高雄市</option>
+                                            <option>高雄市</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            請輸入城市
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <select class="form-control form-control-lg bg-primary-lighter" id="region">
+                                            <option selected>新興區</option>
+                                            <option>新興區</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            請輸入鄉鎮市區
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-lg bg-primary-lighter"
+                                        placeholder="請輸入地址" value="桃園市森田路168號" required>
+                                    <div class="invalid-feedback">
+                                        請輸入地址
+                                    </div>
+                                </div>
+
+                                
+                        </div>
+                            <button type="submit" class="btn btn-accent btn-lg btn-block text-primary">下一步</button>
+                                </div>
+                            </div>
+                           
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-4 d-none d-lg-block">
+                <div class="card">
+                    <div class="card-header text-center text-primary-light bg-primary-lighter h2">
+                        訂單摘要
+                    </div>
+                    <div class="card-body text-primary-light">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>小計</span>
+                            <span>NT$ 240</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>運費</span>
+                            <span>NT$ 30</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span class="h5">總計</span>
+                            <span class="h5">NT$ 270</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mt-5 border-primary-lighter">
+                    <div class="card-header text-center text-primary-light bg-primary-lighter h2">
+                        購物清單
+                    </div>
+                    <div class="card-body carts">
+                        <div class="d-flex">
+                            <div class="cart-image cart-image-sm mr-3"
+                                style="background-image: url(https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=401&q=80)">
+                            </div>
+                            <div class="d-flex align-items-md-center">
+                                <div class="flex-fill mr-lg-4 text-primary-light">
+                                    <span class="h5">美式漢堡 (2)</span><br>
+                                    <span>NT$ 130</span>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="d-flex mt-3">
+                            <div class="cart-image cart-image-sm mr-3"
+                                style="background-image: url(https://images.unsplash.com/photo-1528735602780-2552fd46c7af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80)">
+                            </div>
+                            <div class="d-flex align-items-md-center">
+                                <div class="flex-fill mr-lg-4 text-primary-light">
+                                    <span class="h5">熱壓吐司 (2)</span><br>
+                                    <span>NT$ 110</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- 訂閱郵件 -->
+    <section class="py-5 bg-primary">
+        <div class="container">
+          <div class="row justify-content-center">
+            <!-- 上半 -->
+            <div class="col-md-5 d-flex align-items-center justify-content-center justify-content-md-start mb-4 mb-md-0">
+              <img src="./images/icon_64.ico" width="40" height="40">
+              <span class="h4 text-white mb-0 mx-3">訂閱你我的森田郵件</span>
+            </div>
+            <!-- 下半 -->
+            <div class="col-md-5">
+              <div class="custom-form d-flex">
+                <label for="subscription" class="custom-form-icon text-primary">
+                  <i class="fas fa-envelope" style="font-size: 24px;"></i>
+                </label>
+                <input type="email" id="subscription" class="custom-form-input">
+                <button class="btn btn-accent btn-lg d-flex align-items-center">
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Footer -->
+      <footer class="py-4 bg-primary-lighter">
+        <div class="container">
+          <!-- 上半 -->
+          <div class="row justify-content-center">
+            <div class="col-md-5 d-flex flex-column justify-content-between">
+              <!-- 要用 div 包住不然圖片寬度會跑掉 -->
+              <div>
+                <img src="images/森田.svg" height="100">
+              </div>
+              <ul class="list-unstyled mt-5 text-primary">
+                <li>07-1234-5678</li>
+                <li><a href="mailto:sweetaste@email.com">mortia@email.com</a></li>
+                <li>330 桃園市森田路168號</li>
+              </ul>
+            </div>
+            <div class="col-md-5 d-none d-md-block mt-6">
+              <div class="writing-vertical font-weight-bold h2 mb-0 ml-auto">
+                <p class="mb-0" style="margin-top: -50px;">每天都是</p>
+              <p class="mb-0">吃早餐的好日子</p>
+              </div>
+              
+            </div>
+          </div>
+          <!-- 下半 -->
+          <div class="row mt-4 justify-content-center">
+            <div class="col-md-5 mt-2">
+              <a href="#" class="active"><i class="fab fa-facebook-square fa-3x"></i></a>
+              <a href="#" class="active"><i class="fab fa-line fa-3x"></i></a>
+              
+            </div>
+            <div class="col-md-5 text-md-right mt-2">
+              <span class="text-primary">© 2019 mortia* All Rights Reserved</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+        <script>
+            $(function () {
+                $('#myList a:last-child').tab('show')
+            })
+        </script>
+         <script>
+                // 表單確認
+                (function() {
+                  'use strict';
+                  window.addEventListener('load', function() {
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName('needs-validation');
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function(form) {
+                      form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                          event.preventDefault();
+                          event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                      }, false);
+                    });
+                  }, false);
+                })();
+                </script>
+</body>
+
+</html>

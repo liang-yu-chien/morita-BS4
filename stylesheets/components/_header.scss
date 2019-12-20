@@ -1,0 +1,63 @@
+.header {
+    $main-height: 496px;
+    position: relative;
+    .header-main-image {
+      height: $main-height;
+    }
+  
+    // 毛玻璃
+    $frosted-image-height: 256px;
+    .frosted-section {
+      margin-top: -90px;
+    }
+    
+    .frosted-image-wrap {
+      height: $frosted-image-height;
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+      writing-mode: vertical-lr;
+      display: flex;
+      color: #fff;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      & + .frosted-image-wrap {
+        border-left: 1px solid white;
+      }
+      .frosted-over {
+        background-color: rgba(theme-color('primary'), .8);
+        transition: background-color .5s;
+      }
+  
+      // 變色效果
+      &.active, &:hover, &:focus {
+        color: theme-color('primary');
+        font-weight: bolder;
+        .frosted-over {
+          background-color: rgba(theme-color('accent'), .8);
+        }
+        .frosted-image {
+          filter: blur(0);
+        }
+      } 
+    }
+  
+    .frosted-text {
+      font-size: 24px;
+      letter-spacing: 10px;
+    }
+  
+    .frosted-image {
+      position: absolute;
+      right: -10px;
+      left: -10px;
+      top: -10px;
+      bottom: -10px;
+      filter: blur(5px);
+      z-index: -2;
+      transition: filter .5s;
+    }
+  
+    
+  }
